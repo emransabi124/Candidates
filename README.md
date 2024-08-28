@@ -30,6 +30,11 @@ To get started with this project, follow these steps:
      ```bash
      dotnet run --project ./Candidates.csproj
      ```
+
+   - **Host**:
+     ```bash
+      https://localhost:7174/swagger/index.html
+     ```
  
  
 2. **Technologies Used**:
@@ -38,3 +43,9 @@ To get started with this project, follow these steps:
     - **AutoMapper**
     - **Serilog**
     - **Swagger**
+
+
+3. **List of improvements**:
+- **We can add unit action to prevent concurrency or multiple transactions**
+- **Add all CRUD operations**
+- **Add login and authentication JWT for more security**
