@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CandidatesDataAccess.Model
+namespace Candidates.Repositories.Dto
 {
-    public class Candidate
+    public class CandidateDto
     {
-        [Key]
-        public Guid Id { get; set; }
-
         [Required]
         [StringLength(50)]
         public string FirstName { get; set; }
