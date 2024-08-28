@@ -35,6 +35,8 @@ To get started with this project, follow these steps:
      ```bash
       https://localhost:7174/swagger/index.html
      ```
+     ![image](https://github.com/user-attachments/assets/c3d17788-c8b6-48b6-a46d-2ea72ce3fa08)
+
  
  
 2. **Technologies Used**:
