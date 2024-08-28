@@ -2,6 +2,7 @@
 using Candidates.Repositories.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Candidates.Repositories.Dto;
 
 namespace Candidates.Controllers
 {
@@ -17,15 +18,16 @@ namespace Candidates.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddOrUpdateCandidate([FromBody] Candidate candidate)
+        public async Task<IActionResult> AddOrUpdateCandidate([FromBody] CandidateDto candidate)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            await _candidateRepository.CreateOrEditCandidateAsync(candidate);
-            return Ok();
+            var result = await _candidateRepository.CreateOrEditCandidateAsync(candidate);
+
+            return Ok(result.ResultSave);
         }
     }
 
